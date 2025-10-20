@@ -11,7 +11,7 @@ export default function About() {
         <div className="max-w-4xl mx-auto">
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
             Electronics & Communication Engineering undergraduate with expertise in electric vehicle systems,
-            avionics, drones, and VLSI. Experienced in hands-on embedded system design, real-time communication,
+            avionics, drones, and VLSI. Experienced in hands on embedded system design, real-time communication,
             and system integration. Strong leadership background through national competitions and international
             research exposure at NASA. Passionate about building intelligent systems that bridge hardware and
             software to solve real-world challenges in mobility, autonomy, and advanced electronics.
