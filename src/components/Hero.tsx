@@ -18,11 +18,11 @@ export default function Hero() {
         </h1>
 
         <div className="text-xl md:text-2xl text-gray-300 mb-4 font-light tracking-wide">
-          Electronics & Communication Engineer | EV Systems | Avionics | Embedded Technologies
+          Electronics & Communication Engineer | Electric Vehicles | Avionics | Embedded Systems | VLSI Design
         </div>
 
         <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto font-light italic">
-          "Engineering the future of mobility, autonomy, and intelligence."
+          "Turning 'what if' into 'what is' with electronics."
         </p>
 
         <button className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-400 hover:to-cyan-500 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_30px_rgba(6,182,212,0.5)]">
