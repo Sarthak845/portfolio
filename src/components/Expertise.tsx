@@ -4,25 +4,25 @@ const domains = [
   {
     icon: Car,
     title: 'Electric Vehicles',
-    description: 'Powertrain systems, motor control, battery design',
+    description: 'Powertrain architecture, motor control algorithms, battery management systems',
     gradient: 'from-cyan-500 to-blue-500'
   },
   {
     icon: Plane,
     title: 'UAVs & Drones',
-    description: 'Flight controllers, telemetry, autonomous navigation',
+    description: 'Flight control systems, advanced telemetry, autonomous navigation systems',
     gradient: 'from-blue-500 to-indigo-600'
   },
   {
     icon: Bot,
     title: 'Robotics & IoT',
-    description: 'Sensor fusion, obstacle avoidance, real-time communication',
+    description: 'Multi-sensor fusion, intelligent obstacle avoidance, real-time embedded communication',
     gradient: 'from-indigo-600 to-purple-600'
   },
   {
     icon: Cpu,
     title: 'VLSI & Semiconductors',
-    description: 'CMOS, EDA tools, circuit design',
+    description: 'CMOS design methodology, EDA tool flow, integrated circuit design',
     gradient: 'from-purple-600 to-cyan-500'
   }
 ];
