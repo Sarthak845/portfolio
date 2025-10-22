@@ -14,7 +14,7 @@ export default function About() {
             avionics, drones, and VLSI. Experienced in hands on embedded system design, real-time communication,
             and system integration. Strong leadership background through national competitions and international
             research exposure at NASA. Passionate about building intelligent systems that bridge hardware and
-            software to solve real-world challenges in mobility, autonomy, and advanced electronics.
+            software to solve real world challenges in mobility, autonomy, and advanced electronics.
           </p>
         </div>
       </div>
