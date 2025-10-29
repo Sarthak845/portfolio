@@ -5,7 +5,9 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 3000,
+    // Set a fixed dev port so the Local URL is predictable across runs
+    // Common Vite default is 5173 — choose that to match many examples/tools
+    port: 5173,
     open: true,
     host: true
   },
