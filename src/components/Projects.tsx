@@ -1,4 +1,7 @@
-import { Code2, Zap, Car, Cpu, Battery, Drone, Radio, CpuIcon } from 'lucide-react';
+import { Code2, Zap, Car, Cpu, Battery, Radio } from 'lucide-react';
+
+// Simple inline Quadcopter/Drone icon (defined locally because 'Drone' isn't exported by lucide-react)
+const Drone = (props: any) => (
 
 const projects = [
   {
