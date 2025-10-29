@@ -5,31 +5,31 @@ const domains = [
     icon: Car,
     title: 'Electric Vehicles',
     description: 'Powertrain architecture, motor control algorithms, battery management systems, award winning EV designs',
-    gradient: 'from-cyan-500 to-blue-500'
+    gradient: 'from-green-500 to-emerald-600' // Green for eco-friendly EVs
   },
   {
     icon: Plane,
     title: 'UAVs & Drones',
     description: 'Flight control systems, advanced telemetry, autonomous navigation systems',
-    gradient: 'from-blue-500 to-indigo-600'
+    gradient: 'from-sky-500 to-blue-600' // Sky blue for aviation
   },
   {
     icon: Bot,
     title: 'Robotics & IoT',
-    description: 'Multi-sensor fusion, intelligent obstacle avoidance, realtime embedded communication',
-    gradient: 'from-indigo-600 to-purple-600'
+    description: 'Multi-sensor fusion, intelligent obstacle avoidance, real time embedded communication',
+    gradient: 'from-purple-500 to-fuchsia-600' // Purple for advanced robotics
   },
   {
     icon: Wrench,
     title: 'Vehicle Mechanical Design',
     description: 'Complete vehicle systems: chassis design, steering geometry, braking systems, transmission integration',
-    gradient: 'from-amber-500 to-red-500'
+    gradient: 'from-orange-500 to-red-500' // Red/Orange for mechanical/industrial
   },
   {
     icon: Cpu,
     title: 'VLSI & Semiconductors',
     description: 'CMOS design methodology, EDA tool flow, integrated circuit design',
-    gradient: 'from-purple-600 to-cyan-500'
+    gradient: 'from-gray-600 to-slate-700' // Gray for silicon chips
   }
 ];
 
