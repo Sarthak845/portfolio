@@ -1,9 +1,9 @@
-import { Briefcase, GraduationCap, Trophy, Users, Cpu, Battery, Zap, Award, Calendar } from 'lucide-react';
+import { GraduationCap, Trophy, Users, Cpu, Battery, Zap, Award, Calendar, Crown, Rocket, TrendingUp, Building2 } from 'lucide-react';
 
 const experiences = [
   {
     type: 'leadership',
-    icon: Users,
+    icon: Crown,
     title: 'Vice Captain',
     organization: 'Team Pro-Karters, MIT-WPU',
     period: '2024 – 2025',
@@ -23,7 +23,7 @@ const experiences = [
   },
   {
     type: 'technical',
-    icon: Cpu,
+    icon: Rocket,
     title: 'Electronics & Powertrain Lead',
     organization: 'Team Pro-Karters, MIT-WPU',
     period: '2023 – 2024',
@@ -42,7 +42,7 @@ const experiences = [
   },
   {
     type: 'technical',
-    icon: Battery,
+    icon: TrendingUp,
     title: 'Junior Electronics & Powertrain Engineer',
     organization: 'Team Pro-Karters, MIT-WPU',
     period: '2022 – 2023',
@@ -256,8 +256,7 @@ export default function Experience() {
                       <div 
                         className={`h-2 rounded-full bg-gradient-to-r ${gradient} transition-all duration-1000 ease-out`}
                         style={{ 
-                          width: '0%',
-                          animation: `fillBar${index} 1s ease-out forwards` 
+                          width: '0%'
                         }}
                       ></div>
                     </div>
@@ -291,14 +290,6 @@ export default function Experience() {
           </div>
         </div>
       </div>
-
-      <style>{`
-        @keyframes fillBar0 { to { width: 100%; } }
-        @keyframes fillBar1 { to { width: 80%; } }
-        @keyframes fillBar2 { to { width: 60%; } }
-        @keyframes fillBar3 { to { width: 40%; } }
-        @keyframes fillBar4 { to { width: 90%; } }
-      `}</style>
     </section>
   );
 }
