@@ -1,4 +1,4 @@
-import { Code2, Zap, Car, Cpu, Battery, Drone, Radio, CpuIcon } from 'lucide-react';
+import { Code2, Zap, Car, Cpu, Battery, Radio, Microchip, Plane } from 'lucide-react';
 
 const projects = [
   {
@@ -26,7 +26,7 @@ const projects = [
     title: 'FC-Quadcopter V1',
     description: 'Complete quadcopter system with custom flight controller, telemetry, and autonomous capabilities for research and practical applications.',
     tech: ['UAV Design', 'Flight Dynamics', 'Sensor Fusion', 'Aerodynamics'],
-    icon: <Drone className="w-6 h-6 text-white" />,
+    icon: <Plane className="w-6 h-6 text-white" />,
     award: false
   },
   {
@@ -40,7 +40,7 @@ const projects = [
     title: 'STM32 Flight Controller',
     description: 'Advanced custom flight controller using STM32 microcontroller with sensor fusion, PID control, and precise navigation capabilities.',
     tech: ['STM32', 'Sensor Fusion', 'PID Control', 'Real-time Systems'],
-    icon: <CpuIcon className="w-6 h-6 text-white" />,
+    icon: <Microchip className="w-6 h-6 text-white" />,
     award: false
   }
 ];
@@ -113,7 +113,7 @@ export default function Projects() {
               Discover my complete portfolio featuring 30+ projects across Robotics, EV Systems, Drones, and Power Electronics
             </p>
             <a
-              href="/projects" // Change this to your actual projects portfolio URL
+              href="/projects"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-amber-600 hover:from-cyan-500 hover:to-amber-500 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
             >
               <Code2 className="w-5 h-5" />
