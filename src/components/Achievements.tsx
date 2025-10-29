@@ -4,7 +4,7 @@ const achievements = [
   {
     title: 'AIR 5 - Indian Kart Racing',
     year: '2024',
-    description: 'ed All India Rank 5 in the prestigious Indian Kart Racing Championship',
+    description: 'Achieved All India Rank 5 in the prestigious Indian Kart Racing Championship',
     icon: Award
   },
   {
