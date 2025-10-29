@@ -7,7 +7,7 @@ const experiences = [
     title: 'Vice Captain',
     organization: 'Team Pro-Karters, MIT-WPU',
     period: '2024 – 2025',
-    description: 'Oversaw complete technical and management operations spanning electrical, mechanical, and design divisions. Served as lead racing driver and mentor for junior engineers.',
+    description: 'Oversaw complete technical and management operations spanning electrical, mechanical, and design divisions. Served as racing driver and mentor for junior engineers.',
     highlights: [
       'AIR 2 - Morphine Motorsports 2025',
       'AIR 6 - Formula Kart Design Challenge',
@@ -17,7 +17,7 @@ const experiences = [
     ],
     achievements: [
       { icon: Trophy, text: 'Multiple Podium Finishes' },
-      { icon: Users, text: 'Structured Training Programs' },
+      { icon: Users, text: 'Racing Driver' },
       { icon: Award, text: 'National Level Recognition' }
     ]
   },
@@ -29,10 +29,11 @@ const experiences = [
     period: '2023 – 2024',
     description: 'Led electronics and powertrain design for all-electric go-kart, focusing on BLDC motor control, energy optimization, and telemetry systems.',
     highlights: [
+      'AIR 5 - Indian Karting Race 2024',
       'Best Powertrain Award',
       'Innovation Award',
       'Electrical System Officer (ESO)',
-      'AIR 5 - Indian Karting Race 2024'
+      
     ],
     achievements: [
       { icon: Battery, text: 'EV Dashboard Design' },
@@ -48,10 +49,10 @@ const experiences = [
     period: '2022 – 2023',
     description: 'Assisted in battery pack design, electrical layout, and manufacturing for first-generation electric kart. Gained hands-on vehicle assembly experience.',
     highlights: [
+      'AIR 7 - Go-Kart Design Challenge',
       'Battery Pack Design',
       'Electrical System Layout',
-      'Vehicle Assembly',
-      'AIR 7 - Go-Kart Design Challenge'
+      'Vehicle Assembly'
     ],
     achievements: [
       { icon: Battery, text: 'Battery Systems' },
