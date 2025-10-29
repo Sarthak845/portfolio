@@ -12,7 +12,7 @@ export default function About() {
 
         <div className="max-w-4xl mx-auto">
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
-            I’m an Electronics Engineer who builds systems that think and perform. I learn by doing from designing electric vehical powertrains and avionics systems to developing smart robotics and IoT hardware. I’ve led teams to national stages and gained global exposure through NASA’s educational program. For me, innovation isn’t theory, it’s hands-on, tested, and built to make a difference.
+            I’m an Electronics Engineer who builds systems that think and perform. I learn by doing from designing electric vehical powertrains and avionics systems to developing smart robotics and IoT hardware. I’ve led teams to national stages and gained global exposure through NASA’s educational program. For me innovation isn’t theory, it’s hands on, tested, and built to make a difference.
 
           </p>
         </div>

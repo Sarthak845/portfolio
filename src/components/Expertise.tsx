@@ -1,10 +1,10 @@
-import { Car, Plane, Bot, Cpu } from 'lucide-react';
+import { Car, Plane, Bot, Cpu, Wrench } from 'lucide-react';
 
 const domains = [
   {
     icon: Car,
     title: 'Electric Vehicles',
-    description: 'Powertrain architecture, motor control algorithms, battery management systems',
+    description: 'Powertrain architecture, motor control algorithms, battery management systems, award winning EV designs',
     gradient: 'from-cyan-500 to-blue-500'
   },
   {
@@ -16,8 +16,14 @@ const domains = [
   {
     icon: Bot,
     title: 'Robotics & IoT',
-    description: 'Multi-sensor fusion, intelligent obstacle avoidance, real-time embedded communication',
+    description: 'Multi-sensor fusion, intelligent obstacle avoidance, real time embedded communication',
     gradient: 'from-indigo-600 to-purple-600'
+  },
+  {
+    icon: Wrench,
+    title: 'Vehicle Mechanical Design',
+    description: 'Complete vehicle systems: chassis design, steering geometry, braking systems, transmission integration',
+    gradient: 'from-amber-500 to-red-500'
   },
   {
     icon: Cpu,
@@ -36,7 +42,7 @@ export default function Expertise() {
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-amber-500 mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {domains.map((domain, index) => {
             const Icon = domain.icon;
             return (
