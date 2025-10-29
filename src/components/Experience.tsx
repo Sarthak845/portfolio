@@ -1,4 +1,4 @@
-import { GraduationCap, Trophy, Users, Cpu, Battery, Zap, Award, Calendar, Crown, Rocket, TrendingUp, Building2 } from 'lucide-react';
+import { GraduationCap, Trophy, Users, Cpu, Battery, Zap, Award, Calendar, Crown, Rocket, TrendingUp } from 'lucide-react';
 
 const experiences = [
   {
@@ -99,49 +99,153 @@ const experiences = [
   }
 ];
 
-const getGradientByType = (type: string) => {
-  switch (type) {
-    case 'leadership':
-      return 'from-purple-500 to-pink-600';
-    case 'technical':
-      return 'from-cyan-500 to-blue-600';
-    case 'education':
-      return 'from-green-500 to-emerald-600';
-    case 'competitions':
-      return 'from-amber-500 to-orange-600';
-    default:
-      return 'from-cyan-500 to-amber-600';
-  }
-};
+const ExperienceCard = ({ exp, index }: { exp: any; index: number }) => {
+  const Icon = exp.icon;
+  
+  // Static gradient classes based on type
+  const getStyles = (type: string) => {
+    switch (type) {
+      case 'leadership':
+        return {
+          gradient: 'from-purple-500 to-pink-600',
+          borderColor: 'hover:border-purple-500/50',
+          textColor: 'group-hover:text-purple-600',
+          bgHover: 'group-hover:from-purple-500/5 group-hover:to-pink-500/5'
+        };
+      case 'technical':
+        return {
+          gradient: 'from-cyan-500 to-blue-600',
+          borderColor: 'hover:border-cyan-500/50',
+          textColor: 'group-hover:text-cyan-600',
+          bgHover: 'group-hover:from-cyan-500/5 group-hover:to-blue-500/5'
+        };
+      case 'education':
+        return {
+          gradient: 'from-green-500 to-emerald-600',
+          borderColor: 'hover:border-green-500/50',
+          textColor: 'group-hover:text-green-600',
+          bgHover: 'group-hover:from-green-500/5 group-hover:to-emerald-500/5'
+        };
+      case 'competitions':
+        return {
+          gradient: 'from-amber-500 to-orange-600',
+          borderColor: 'hover:border-amber-500/50',
+          textColor: 'group-hover:text-amber-600',
+          bgHover: 'group-hover:from-amber-500/5 group-hover:to-orange-500/5'
+        };
+      default:
+        return {
+          gradient: 'from-cyan-500 to-amber-600',
+          borderColor: 'hover:border-cyan-500/50',
+          textColor: 'group-hover:text-cyan-600',
+          bgHover: 'group-hover:from-cyan-500/5 group-hover:to-amber-500/5'
+        };
+    }
+  };
 
-const getBorderColorByType = (type: string) => {
-  switch (type) {
-    case 'leadership':
-      return 'hover:border-purple-500/50';
-    case 'technical':
-      return 'hover:border-cyan-500/50';
-    case 'education':
-      return 'hover:border-green-500/50';
-    case 'competitions':
-      return 'hover:border-amber-500/50';
-    default:
-      return 'hover:border-cyan-500/50';
-  }
-};
+  const styles = getStyles(exp.type);
 
-const getTextColorByType = (type: string) => {
-  switch (type) {
-    case 'leadership':
-      return 'group-hover:text-purple-600';
-    case 'technical':
-      return 'group-hover:text-cyan-600';
-    case 'education':
-      return 'group-hover:text-green-600';
-    case 'competitions':
-      return 'group-hover:text-amber-600';
-    default:
-      return 'group-hover:text-cyan-600';
-  }
+  return (
+    <div
+      className={`group relative bg-white rounded-2xl p-8 border-2 border-gray-100 ${styles.borderColor} hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1`}
+    >
+      {/* Background Gradient Effect */}
+      <div className={`absolute inset-0 bg-gradient-to-br from-transparent to-transparent ${styles.bgHover} rounded-2xl transition-all duration-500`}></div>
+
+      <div className="relative">
+        {/* Header Section */}
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-6">
+          <div className="flex items-start gap-6">
+            <div className={`w-20 h-20 bg-gradient-to-br ${styles.gradient} rounded-2xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg`}>
+              <Icon className="w-10 h-10 text-white" />
+            </div>
+            
+            <div className="flex-1">
+              <h3 className={`text-2xl font-bold text-gray-900 ${styles.textColor} transition-colors mb-2`}>
+                {exp.title}
+              </h3>
+              <p className="text-xl text-gray-700 font-semibold mb-1">{exp.organization}</p>
+              <div className="flex items-center gap-2 text-gray-500">
+                <Calendar className="w-4 h-4" />
+                <span className="font-medium">{exp.period}</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex-shrink-0">
+            <span className={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${styles.gradient} text-white rounded-full text-sm font-semibold shadow-lg`}>
+              <Award className="w-4 h-4" />
+              {exp.type.charAt(0).toUpperCase() + exp.type.slice(1)}
+            </span>
+          </div>
+        </div>
+
+        {/* Description */}
+        <p className="text-gray-700 text-lg leading-relaxed mb-6 border-l-4 border-gray-200 pl-4">
+          {exp.description}
+        </p>
+
+        {/* Highlights & Achievements Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Highlights */}
+          <div>
+            <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
+              <Zap className="w-5 h-5 text-amber-500" />
+              Key Highlights
+            </h4>
+            <div className="space-y-2">
+              {exp.highlights.map((highlight: string, hIndex: number) => (
+                <div
+                  key={hIndex}
+                  className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-white hover:shadow-md transition-all duration-300"
+                >
+                  <div className={`w-2 h-2 bg-gradient-to-r ${styles.gradient} rounded-full`}></div>
+                  <span className="text-gray-700 font-medium">{highlight}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Achievements */}
+          <div>
+            <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
+              <Trophy className="w-5 h-5 text-amber-500" />
+              Core Competencies
+            </h4>
+            <div className="space-y-2">
+              {exp.achievements.map((achievement: any, aIndex: number) => {
+                const AchievementIcon = achievement.icon;
+                return (
+                  <div
+                    key={aIndex}
+                    className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-white hover:shadow-md transition-all duration-300"
+                  >
+                    <div className={`w-10 h-10 bg-gradient-to-br ${styles.gradient} rounded-lg flex items-center justify-center transform hover:scale-110 transition-all duration-300`}>
+                      <AchievementIcon className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="text-gray-700 font-medium">{achievement.text}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        {/* Progress Bar */}
+        <div className="mt-6">
+          <div className="w-full bg-gray-200 rounded-full h-2">
+            <div 
+              className={`h-2 rounded-full bg-gradient-to-r ${styles.gradient} transition-all duration-1000 ease-out`}
+              style={{ width: '100%' }}
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Animated Border */}
+      <div className={`absolute left-0 bottom-0 w-0 h-1 bg-gradient-to-r ${styles.gradient} group-hover:w-full transition-all duration-500 rounded-full`}></div>
+    </div>
+  );
 };
 
 export default function Experience() {
@@ -157,117 +261,9 @@ export default function Experience() {
         </div>
 
         <div className="space-y-8">
-          {experiences.map((exp, index) => {
-            const Icon = exp.icon;
-            const gradient = getGradientByType(exp.type);
-            const borderColor = getBorderColorByType(exp.type);
-            const textColor = getTextColorByType(exp.type);
-            
-            return (
-              <div
-                key={index}
-                className={`group relative bg-white rounded-2xl p-8 border-2 border-gray-100 ${borderColor} hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1`}
-              >
-                {/* Background Gradient Effect */}
-                <div className={`absolute inset-0 bg-gradient-to-br from-transparent to-transparent group-hover:from-${gradient.split(' ')[0].split('-')[1]}-500/3 group-hover:to-${gradient.split(' ')[2].split('-')[1]}-500/3 rounded-2xl transition-all duration-500`}></div>
-
-                <div className="relative">
-                  {/* Header Section */}
-                  <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-6">
-                    <div className="flex items-start gap-6">
-                      <div className={`w-20 h-20 bg-gradient-to-br ${gradient} rounded-2xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg`}>
-                        <Icon className="w-10 h-10 text-white" />
-                      </div>
-                      
-                      <div className="flex-1">
-                        <h3 className={`text-2xl font-bold text-gray-900 ${textColor} transition-colors mb-2`}>
-                          {exp.title}
-                        </h3>
-                        <p className="text-xl text-gray-700 font-semibold mb-1">{exp.organization}</p>
-                        <div className="flex items-center gap-2 text-gray-500">
-                          <Calendar className="w-4 h-4" />
-                          <span className="font-medium">{exp.period}</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="flex-shrink-0">
-                      <span className={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${gradient} text-white rounded-full text-sm font-semibold shadow-lg`}>
-                        <Award className="w-4 h-4" />
-                        {exp.type.charAt(0).toUpperCase() + exp.type.slice(1)}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Description */}
-                  <p className="text-gray-700 text-lg leading-relaxed mb-6 border-l-4 border-gray-200 pl-4">
-                    {exp.description}
-                  </p>
-
-                  {/* Highlights & Achievements Grid */}
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    {/* Highlights */}
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                        <Zap className="w-5 h-5 text-amber-500" />
-                        Key Highlights
-                      </h4>
-                      <div className="space-y-2">
-                        {exp.highlights.map((highlight, hIndex) => (
-                          <div
-                            key={hIndex}
-                            className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-white hover:shadow-md transition-all duration-300"
-                          >
-                            <div className={`w-2 h-2 bg-gradient-to-r ${gradient} rounded-full`}></div>
-                            <span className="text-gray-700 font-medium">{highlight}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Achievements */}
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                        <Trophy className="w-5 h-5 text-amber-500" />
-                        Core Competencies
-                      </h4>
-                      <div className="space-y-2">
-                        {exp.achievements.map((achievement, aIndex) => {
-                          const AchievementIcon = achievement.icon;
-                          return (
-                            <div
-                              key={aIndex}
-                              className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-white hover:shadow-md transition-all duration-300 group/achievement"
-                            >
-                              <div className={`w-10 h-10 bg-gradient-to-br ${gradient} rounded-lg flex items-center justify-center transform group-hover/achievement:scale-110 transition-all duration-300`}>
-                                <AchievementIcon className="w-5 h-5 text-white" />
-                              </div>
-                              <span className="text-gray-700 font-medium">{achievement.text}</span>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Progress Bar */}
-                  <div className="mt-6">
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div 
-                        className={`h-2 rounded-full bg-gradient-to-r ${gradient} transition-all duration-1000 ease-out`}
-                        style={{ 
-                          width: '0%'
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Animated Border */}
-                <div className={`absolute left-0 bottom-0 w-0 h-1 bg-gradient-to-r ${gradient} group-hover:w-full transition-all duration-500 rounded-full`}></div>
-              </div>
-            );
-          })}
+          {experiences.map((exp, index) => (
+            <ExperienceCard key={index} exp={exp} index={index} />
+          ))}
         </div>
 
         {/* Summary Stats */}
