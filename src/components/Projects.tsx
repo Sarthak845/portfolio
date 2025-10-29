@@ -1,4 +1,4 @@
-import { Code2, Zap, Car, Cpu, Battery, Radio, Microchip, Plane } from 'lucide-react';
+import { Code2, Zap, Car, Cpu, Battery, Radio, Plane, CpuIcon } from 'lucide-react';
 
 const projects = [
   {
@@ -11,14 +11,14 @@ const projects = [
   {
     title: 'Racing EV Dashboard',
     description: 'Multiple-featured digital dashboard displaying real-time telemetry including speed, battery parameters, motor RPM, and rear-view camera feed.',
-    tech: ['Embedded Programming', 'Display Systems', 'CAN Protocol', 'Real-time Data'],
+    tech: ['Embedded Programming', 'Display Systems', 'Hardware', 'Real-time Data'],
     icon: <Cpu className="w-6 h-6 text-white" />,
     award: true
   },
   {
-    title: '72V Racing EV Battery',
-    description: 'Custom designed and manufactured high-performance 72V battery packs with integrated BMS for racing electric vehicles.',
-    tech: ['Battery Design', 'BMS', 'Thermal Management', 'Power Systems'],
+    title: '72V 90Ah Racing EV Battery',
+    description: 'Custom designed and manufactured high-performance 72V 90AH battery packs with integrated BMS for racing electric vehicles.',
+    tech: ['Battery Design', 'BMS', 'Thermal Management', 'Power Systems', 'Battery manufacturing'],
     icon: <Battery className="w-6 h-6 text-white" />,
     award: true
   },
@@ -32,15 +32,15 @@ const projects = [
   {
     title: 'NRF Transmitter & Receiver',
     description: 'Custom wireless communication system using NRF modules for reliable low-latency remote control and telemetry data transmission.',
-    tech: ['RF Communication', 'Embedded C', 'Protocol Design', 'Wireless Systems'],
+    tech: ['RF Communication', 'Embedded', 'Protocol Design', 'Wireless Systems'],
     icon: <Radio className="w-6 h-6 text-white" />,
     award: false
   },
   {
     title: 'STM32 Flight Controller',
     description: 'Advanced custom flight controller using STM32 microcontroller with sensor fusion, PID control, and precise navigation capabilities.',
-    tech: ['STM32', 'Sensor Fusion', 'PID Control', 'Real-time Systems'],
-    icon: <Microchip className="w-6 h-6 text-white" />,
+    tech: ['STM32', 'Sensor Fusion', 'PID Control', 'Real time Systems'],
+    icon: <CpuIcon className="w-6 h-6 text-white" />,
     award: false
   }
 ];
@@ -110,10 +110,10 @@ export default function Projects() {
           <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">Explore All Projects</h3>
             <p className="text-gray-400 mb-6">
-              Discover my complete portfolio featuring 30+ projects across Robotics, EV Systems, Drones, and Power Electronics
+              Discover my complete portfolio featuring projects across Robotics, EV Systems, Drones, and Power Electronics
             </p>
             <a
-              href="/projects"
+              href="https://sart-portfolio.netlify.app/"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-amber-600 hover:from-cyan-500 hover:to-amber-500 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
             >
               <Code2 className="w-5 h-5" />
