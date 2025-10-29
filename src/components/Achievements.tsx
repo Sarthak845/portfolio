@@ -6,7 +6,7 @@ const achievements = [
     year: '2024',
     description: 'All India Rank 2 in prestigious national racing competition',
     icon: Trophy,
-    category: 'racing',
+    category: 'designing and racing',
     highlight: true
   },
   {
@@ -14,32 +14,31 @@ const achievements = [
     year: '2024',
     description: 'All India Rank 6 in national-level kart design and engineering competition',
     icon: Cpu,
-    category: 'design'
+    category: 'designing and racing'
   },
   {
     title: 'AIR 5 - Indian Karting Race',
     year: '2024',
     description: 'All India Rank 5 with Best Powertrain Award in national racing championship',
     icon: Zap,
-    category: 'racing',
-    highlight: true
+    category: 'designing and racing',
   },
   {
     title: 'AIR 7 - Go-Kart Design Challenge',
     year: '2023',
     description: 'All India Rank 7 in national engineering design competition',
     icon: Award,
-    category: 'design'
+    category: 'designing and racing'
   },
   {
-    title: 'Roborace Winners - BVPU Techfest',
+    title: 'Roborace Winner - BVPU Techfest',
     year: '2024',
     description: 'First place in autonomous robotics racing competition',
     icon: Rocket,
     category: 'robotics'
   },
   {
-    title: 'Ideathon Winners - BVPU Techfest',
+    title: 'Ideathon Winner - BVPU Techfest',
     year: '2024',
     description: 'Top prize in innovation and idea pitching competition',
     icon: Users,
@@ -50,7 +49,7 @@ const achievements = [
     year: '2024',
     description: 'Recognized for excellence in electric vehicle powertrain design',
     icon: Star,
-    category: 'technical',
+    category: 'EV Powertrain',
     highlight: true
   },
   {
