@@ -12,8 +12,7 @@ export default function About() {
 
         <div className="max-w-4xl mx-auto">
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
-            I am an Electronics Engineer specializing in system-level design and integration for next-generation technology. My core competency is transforming concepts into functional hardware, with hands-on expertise in electric vehicle systems, drone avionics, and embedded communication. I combine this technical skill with leadership honed in national contests and the unique experience of contributing to research at an international level with NASA.
-
+            I’m an Electronics Engineer who builds systems that think and perform. I learn by doing from designing electric vehical powertrains and avionics systems to developing smart robotics and IoT hardware. I’ve led teams to national stages and gained global exposure through NASA’s educational program. For me, innovation isn’t theory, it’s hands-on, tested, and built to make a difference.
 
           </p>
         </div>
