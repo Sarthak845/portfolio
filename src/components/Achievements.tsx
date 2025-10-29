@@ -1,11 +1,11 @@
-import { Award, Rocket, Trophy, Star, Zap, Users, Cpu, Flag } from 'lucide-react';
+import { Award, Rocket, Trophy, Star, Zap, Users, Cpu, Flag, Car, Battery, Wrench, Lightbulb, Globe } from 'lucide-react';
 
 const achievements = [
   {
     title: 'AIR 2 - Morphine Motorsports',
     year: '2024',
     description: 'All India Rank 2 in prestigious national racing competition',
-    icon: Trophy,
+    icon: Car,
     category: 'designing and racing',
     highlight: true
   },
@@ -13,21 +13,21 @@ const achievements = [
     title: 'AIR 6 - Formula Kart Design Challenge',
     year: '2024',
     description: 'All India Rank 6 in national-level kart design and engineering competition',
-    icon: Cpu,
+    icon: Wrench,
     category: 'designing and racing'
   },
   {
     title: 'AIR 5 - Indian Karting Race',
     year: '2024',
     description: 'All India Rank 5 with Best Powertrain Award in national racing championship',
-    icon: Zap,
+    icon: Trophy,
     category: 'designing and racing',
   },
   {
     title: 'AIR 7 - Go-Kart Design Challenge',
     year: '2023',
     description: 'All India Rank 7 in national engineering design competition',
-    icon: Award,
+    icon: Cpu,
     category: 'designing and racing'
   },
   {
@@ -41,14 +41,14 @@ const achievements = [
     title: 'Ideathon Winner - BVPU Techfest',
     year: '2024',
     description: 'Top prize in innovation and idea pitching competition',
-    icon: Users,
+    icon: Lightbulb,
     category: 'innovation'
   },
   {
     title: 'Best Powertrain Award - IKR',
     year: '2024',
     description: 'Recognized for excellence in electric vehicle powertrain design',
-    icon: Star,
+    icon: Battery,
     category: 'EV Powertrain',
     highlight: true
   },
@@ -56,68 +56,61 @@ const achievements = [
     title: 'NASA Educational Program',
     year: '2019',
     description: 'International aerospace research program at Kennedy Space Center',
-    icon: Flag,
+    icon: Globe,
     category: 'international'
   }
 ];
 
-const getCategoryStyle = (category) => {
+const getCategoryStyle = (category: string) => {
   switch (category) {
-    case 'racing':
+    case 'designing and racing':
       return {
-        gradient: 'from-red-500 to-orange-600',
-        bgGradient: 'from-red-500/5 to-orange-500/5',
-        border: 'hover:border-red-500/50',
-        text: 'group-hover:text-red-600'
-      };
-    case 'design':
-      return {
-        gradient: 'from-blue-500 to-cyan-600',
+        gradient: 'from-blue-500 to-cyan-500',
         bgGradient: 'from-blue-500/5 to-cyan-500/5',
-        border: 'hover:border-blue-500/50',
+        border: 'hover:border-blue-400/50',
         text: 'group-hover:text-blue-600'
       };
     case 'robotics':
       return {
-        gradient: 'from-purple-500 to-pink-600',
-        bgGradient: 'from-purple-500/5 to-pink-500/5',
-        border: 'hover:border-purple-500/50',
+        gradient: 'from-purple-500 to-fuchsia-500',
+        bgGradient: 'from-purple-500/5 to-fuchsia-500/5',
+        border: 'hover:border-purple-400/50',
         text: 'group-hover:text-purple-600'
       };
     case 'innovation':
       return {
-        gradient: 'from-green-500 to-emerald-600',
-        bgGradient: 'from-green-500/5 to-emerald-500/5',
-        border: 'hover:border-green-500/50',
-        text: 'group-hover:text-green-600'
+        gradient: 'from-emerald-500 to-teal-500',
+        bgGradient: 'from-emerald-500/5 to-teal-500/5',
+        border: 'hover:border-emerald-400/50',
+        text: 'group-hover:text-emerald-600'
       };
-    case 'technical':
+    case 'EV Powertrain':
       return {
-        gradient: 'from-amber-500 to-yellow-600',
-        bgGradient: 'from-amber-500/5 to-yellow-500/5',
-        border: 'hover:border-amber-500/50',
+        gradient: 'from-amber-500 to-orange-500',
+        bgGradient: 'from-amber-500/5 to-orange-500/5',
+        border: 'hover:border-amber-400/50',
         text: 'group-hover:text-amber-600'
       };
     case 'international':
       return {
-        gradient: 'from-indigo-500 to-purple-600',
-        bgGradient: 'from-indigo-500/5 to-purple-500/5',
-        border: 'hover:border-indigo-500/50',
+        gradient: 'from-indigo-500 to-violet-500',
+        bgGradient: 'from-indigo-500/5 to-violet-500/5',
+        border: 'hover:border-indigo-400/50',
         text: 'group-hover:text-indigo-600'
       };
     default:
       return {
-        gradient: 'from-gray-500 to-gray-600',
-        bgGradient: 'from-gray-500/5 to-gray-500/5',
-        border: 'hover:border-gray-500/50',
-        text: 'group-hover:text-gray-600'
+        gradient: 'from-slate-500 to-gray-500',
+        bgGradient: 'from-slate-500/5 to-gray-500/5',
+        border: 'hover:border-slate-400/50',
+        text: 'group-hover:text-slate-600'
       };
   }
 };
 
 export default function Achievements() {
   return (
-    <section id="achievements" className="py-24 bg-gradient-to-br from-slate-50 to-gray-100 relative overflow-hidden">
+    <section id="achievements" className="py-24 bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
@@ -126,9 +119,9 @@ export default function Achievements() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Achievements & <span className="bg-gradient-to-r from-amber-600 to-cyan-600 bg-clip-text text-transparent">Recognition</span>
+            Achievements & <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Recognition</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-cyan-500 mx-auto rounded-full mb-4"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto rounded-full mb-4"></div>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             National rankings, technical awards, and international recognition in engineering competitions
           </p>

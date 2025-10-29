@@ -100,7 +100,7 @@ const experiences = [
   }
 ];
 
-const ExperienceCard = ({ exp, index }: { exp: any; index: number }) => {
+const ExperienceCard = ({ exp }: { exp: any; index: number }) => {
   const Icon = exp.icon;
   
   // Static gradient classes based on type
