@@ -16,8 +16,8 @@ const projects = [
     award: true
   },
   {
-    title: '72V 90Ah Racing EV Battery',
-    description: 'Custom designed and manufactured high-performance 72V 90AH battery packs with integrated BMS for racing electric vehicles.',
+    title: '72V 72.6Ah Racing EV Battery',
+    description: 'Custom designed and manufactured high performance 72V 72.6AH battery packs with integrated BMS for racing electric vehicles.',
     tech: ['Battery Design', 'BMS', 'Thermal Management', 'Power Systems', 'Battery manufacturing'],
     icon: <Battery className="w-6 h-6 text-white" />,
     award: true

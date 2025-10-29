@@ -1,86 +1,304 @@
-import { Briefcase, GraduationCap } from 'lucide-react';
+import { Briefcase, GraduationCap, Trophy, Users, Cpu, Battery, Zap, Award, Calendar } from 'lucide-react';
 
 const experiences = [
   {
-    icon: Briefcase,
+    type: 'leadership',
+    icon: Users,
     title: 'Vice Captain',
     organization: 'Team Pro-Karters, MIT-WPU',
-    period: '2022 - 2024',
-    description: 'Led electronics and powertrain integration for electric go-karts. Mentored 10+ engineers and secured national ranks (AIR 5 in IKR 2024, AIR 7 in GKDC 2023).',
-    highlights: ['AIR 5 - Indian Kart Racing 2024', 'AIR 7 - Go-Kart Design Challenge 2023', 'Team Leadership & Mentorship']
+    period: '2024 – 2025',
+    description: 'Oversaw complete technical and management operations spanning electrical, mechanical, and design divisions. Served as lead racing driver and mentor for junior engineers.',
+    highlights: [
+      'AIR 2 - Morphine Motorsports 2025',
+      'AIR 6 - Formula Kart Design Challenge',
+      'AIR 1 - Design Presentation (FKDC)',
+      'AIR 2 - Skidpad (FKDC)',
+      'Team Leadership & Driver'
+    ],
+    achievements: [
+      { icon: Trophy, text: 'Multiple Podium Finishes' },
+      { icon: Users, text: 'Structured Training Programs' },
+      { icon: Award, text: 'National Level Recognition' }
+    ]
   },
   {
+    type: 'technical',
+    icon: Cpu,
+    title: 'Electronics & Powertrain Lead',
+    organization: 'Team Pro-Karters, MIT-WPU',
+    period: '2023 – 2024',
+    description: 'Led electronics and powertrain design for all-electric go-kart, focusing on BLDC motor control, energy optimization, and telemetry systems.',
+    highlights: [
+      'Best Powertrain Award',
+      'Innovation Award',
+      'Electrical System Officer (ESO)',
+      'AIR 5 - Indian Karting Race 2024'
+    ],
+    achievements: [
+      { icon: Battery, text: 'EV Dashboard Design' },
+      { icon: Zap, text: 'Motor Tuning Algorithms' },
+      { icon: Award, text: 'National Awards' }
+    ]
+  },
+  {
+    type: 'technical',
+    icon: Battery,
+    title: 'Junior Electronics & Powertrain Engineer',
+    organization: 'Team Pro-Karters, MIT-WPU',
+    period: '2022 – 2023',
+    description: 'Assisted in battery pack design, electrical layout, and manufacturing for first-generation electric kart. Gained hands-on vehicle assembly experience.',
+    highlights: [
+      'Battery Pack Design',
+      'Electrical System Layout',
+      'Vehicle Assembly',
+      'AIR 7 - Go-Kart Design Challenge'
+    ],
+    achievements: [
+      { icon: Battery, text: 'Battery Systems' },
+      { icon: Zap, text: 'Electrical Layout' },
+      { icon: Trophy, text: 'National Debut' }
+    ]
+  },
+  {
+    type: 'education',
     icon: GraduationCap,
-    title: 'Trainee',
-    organization: 'IIT Jodhpur',
-    period: '2023',
-    description: 'Specialized in chip design and semiconductor systems using EDA tools (Altium, Proteus, KiCad).',
-    highlights: ['VLSI Design', 'EDA Tools Mastery', 'Semiconductor Systems']
+    title: 'Trainee - VLSI & Semiconductor Systems',
+    organization: 'IIT Jodhpur (National Technical Tour)',
+    period: '2024',
+    description: '10-day intensive hands-on training in chip design and semiconductor systems using industry-standard EDA tools.',
+    highlights: [
+      'VLSI Design Principles',
+      'Altium Designer',
+      'Proteus & KiCad',
+      'Circuit Simulation'
+    ],
+    achievements: [
+      { icon: Cpu, text: 'Chip Design' },
+      { icon: Award, text: 'IIT Certification' },
+      { icon: Zap, text: 'EDA Tools' }
+    ]
+  },
+  {
+    type: 'competitions',
+    icon: Trophy,
+    title: 'Technical & Competitive Exposure',
+    organization: 'National Level Competitions',
+    period: '2022 – Present',
+    description: 'Active participation in hackathons, ideathons, robowars, roboraces, and circuit design challenges across India.',
+    highlights: [
+      'Multiple Hackathons',
+      'Robowars & Roboraces',
+      'Circuit Design Challenges',
+      'Interdisciplinary Collaboration'
+    ],
+    achievements: [
+      { icon: Users, text: 'Team Collaboration' },
+      { icon: Award, text: 'Problem Solving' },
+      { icon: Zap, text: 'Technical Presentations' }
+    ]
   }
 ];
 
+const getGradientByType = (type) => {
+  switch (type) {
+    case 'leadership':
+      return 'from-purple-500 to-pink-600';
+    case 'technical':
+      return 'from-cyan-500 to-blue-600';
+    case 'education':
+      return 'from-green-500 to-emerald-600';
+    case 'competitions':
+      return 'from-amber-500 to-orange-600';
+    default:
+      return 'from-cyan-500 to-amber-600';
+  }
+};
+
+const getBorderColorByType = (type) => {
+  switch (type) {
+    case 'leadership':
+      return 'hover:border-purple-500/50';
+    case 'technical':
+      return 'hover:border-cyan-500/50';
+    case 'education':
+      return 'hover:border-green-500/50';
+    case 'competitions':
+      return 'hover:border-amber-500/50';
+    default:
+      return 'hover:border-cyan-500/50';
+  }
+};
+
+const getTextColorByType = (type) => {
+  switch (type) {
+    case 'leadership':
+      return 'group-hover:text-purple-600';
+    case 'technical':
+      return 'group-hover:text-cyan-600';
+    case 'education':
+      return 'group-hover:text-green-600';
+    case 'competitions':
+      return 'group-hover:text-amber-600';
+    default:
+      return 'group-hover:text-cyan-600';
+  }
+};
+
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 bg-white">
+    <section id="experience" className="py-24 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Experience</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Experience & Leadership</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-amber-500 mx-auto rounded-full"></div>
+          <p className="text-gray-600 mt-6 text-lg max-w-2xl mx-auto">
+            From technical innovation to team leadership - building excellence in electric vehicle systems and embedded technologies
+          </p>
         </div>
 
         <div className="space-y-8">
           {experiences.map((exp, index) => {
             const Icon = exp.icon;
+            const gradient = getGradientByType(exp.type);
+            const borderColor = getBorderColorByType(exp.type);
+            const textColor = getTextColorByType(exp.type);
+            
             return (
               <div
                 key={index}
-                className="group relative bg-gradient-to-br from-gray-50 to-white rounded-xl p-8 border border-gray-200 hover:border-cyan-500/50 hover:shadow-2xl transition-all duration-500 transform hover:-translate-x-2"
+                className={`group relative bg-white rounded-2xl p-8 border-2 border-gray-100 ${borderColor} hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1`}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-amber-500/0 group-hover:from-cyan-500/5 group-hover:to-amber-500/5 rounded-xl transition-all duration-500"></div>
+                {/* Background Gradient Effect */}
+                <div className={`absolute inset-0 bg-gradient-to-br from-transparent to-transparent group-hover:from-${gradient.split(' ')[0].split('-')[1]}-500/3 group-hover:to-${gradient.split(' ')[2].split('-')[1]}-500/3 rounded-2xl transition-all duration-500`}></div>
 
-                <div className="relative flex flex-col md:flex-row gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
-                      <Icon className="w-8 h-8 text-white" />
+                <div className="relative">
+                  {/* Header Section */}
+                  <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-6">
+                    <div className="flex items-start gap-6">
+                      <div className={`w-20 h-20 bg-gradient-to-br ${gradient} rounded-2xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg`}>
+                        <Icon className="w-10 h-10 text-white" />
+                      </div>
+                      
+                      <div className="flex-1">
+                        <h3 className={`text-2xl font-bold text-gray-900 ${textColor} transition-colors mb-2`}>
+                          {exp.title}
+                        </h3>
+                        <p className="text-xl text-gray-700 font-semibold mb-1">{exp.organization}</p>
+                        <div className="flex items-center gap-2 text-gray-500">
+                          <Calendar className="w-4 h-4" />
+                          <span className="font-medium">{exp.period}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex-shrink-0">
+                      <span className={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${gradient} text-white rounded-full text-sm font-semibold shadow-lg`}>
+                        <Award className="w-4 h-4" />
+                        {exp.type.charAt(0).toUpperCase() + exp.type.slice(1)}
+                      </span>
                     </div>
                   </div>
 
-                  <div className="flex-1">
-                    <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
-                      <div>
-                        <h3 className="text-2xl font-bold text-gray-900 group-hover:text-cyan-600 transition-colors">
-                          {exp.title}
-                        </h3>
-                        <p className="text-lg text-gray-600 font-medium">{exp.organization}</p>
+                  {/* Description */}
+                  <p className="text-gray-700 text-lg leading-relaxed mb-6 border-l-4 border-gray-200 pl-4">
+                    {exp.description}
+                  </p>
+
+                  {/* Highlights & Achievements Grid */}
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {/* Highlights */}
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <Zap className="w-5 h-5 text-amber-500" />
+                        Key Highlights
+                      </h4>
+                      <div className="space-y-2">
+                        {exp.highlights.map((highlight, hIndex) => (
+                          <div
+                            key={hIndex}
+                            className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-white hover:shadow-md transition-all duration-300"
+                          >
+                            <div className={`w-2 h-2 bg-gradient-to-r ${gradient} rounded-full`}></div>
+                            <span className="text-gray-700 font-medium">{highlight}</span>
+                          </div>
+                        ))}
                       </div>
-                      <span className="inline-block mt-2 md:mt-0 px-4 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-medium">
-                        {exp.period}
-                      </span>
                     </div>
 
-                    <p className="text-gray-700 mb-4 leading-relaxed">
-                      {exp.description}
-                    </p>
+                    {/* Achievements */}
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <Trophy className="w-5 h-5 text-amber-500" />
+                        Core Competencies
+                      </h4>
+                      <div className="space-y-2">
+                        {exp.achievements.map((achievement, aIndex) => {
+                          const AchievementIcon = achievement.icon;
+                          return (
+                            <div
+                              key={aIndex}
+                              className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-white hover:shadow-md transition-all duration-300 group/achievement"
+                            >
+                              <div className={`w-10 h-10 bg-gradient-to-br ${gradient} rounded-lg flex items-center justify-center transform group-hover/achievement:scale-110 transition-all duration-300`}>
+                                <AchievementIcon className="w-5 h-5 text-white" />
+                              </div>
+                              <span className="text-gray-700 font-medium">{achievement.text}</span>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
 
-                    <div className="flex flex-wrap gap-2">
-                      {exp.highlights.map((highlight, hIndex) => (
-                        <span
-                          key={hIndex}
-                          className="px-3 py-1 bg-cyan-50 border border-cyan-200 rounded-full text-sm text-cyan-700 font-medium"
-                        >
-                          {highlight}
-                        </span>
-                      ))}
+                  {/* Progress Bar */}
+                  <div className="mt-6">
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div 
+                        className={`h-2 rounded-full bg-gradient-to-r ${gradient} transition-all duration-1000 ease-out`}
+                        style={{ 
+                          width: '0%',
+                          animation: `fillBar${index} 1s ease-out forwards` 
+                        }}
+                      ></div>
                     </div>
                   </div>
                 </div>
 
-                <div className="absolute left-0 bottom-0 w-0 h-1 bg-gradient-to-r from-cyan-500 to-amber-500 group-hover:w-full transition-all duration-500 rounded-full"></div>
+                {/* Animated Border */}
+                <div className={`absolute left-0 bottom-0 w-0 h-1 bg-gradient-to-r ${gradient} group-hover:w-full transition-all duration-500 rounded-full`}></div>
               </div>
             );
           })}
         </div>
+
+        {/* Summary Stats */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
+            <div className="text-3xl font-bold text-gray-900 mb-2">4+</div>
+            <div className="text-gray-600">National Ranks</div>
+          </div>
+          <div className="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
+            <div className="text-3xl font-bold text-gray-900 mb-2">3</div>
+            <div className="text-gray-600">Leadership Roles</div>
+          </div>
+          <div className="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
+            <div className="text-3xl font-bold text-gray-900 mb-2">10+</div>
+            <div className="text-gray-600">Engineers Mentored</div>
+          </div>
+          <div className="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
+            <div className="text-3xl font-bold text-gray-900 mb-2">∞</div>
+            <div className="text-gray-600">Passion for Innovation</div>
+          </div>
+        </div>
       </div>
+
+      <style jsx>{`
+        @keyframes fillBar0 { to { width: 100%; } }
+        @keyframes fillBar1 { to { width: 80%; } }
+        @keyframes fillBar2 { to { width: 60%; } }
+        @keyframes fillBar3 { to { width: 40%; } }
+        @keyframes fillBar4 { to { width: 90%; } }
+      `}</style>
     </section>
   );
 }

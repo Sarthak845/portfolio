@@ -1,4 +1,4 @@
-import { Mail, Linkedin, MapPin } from 'lucide-react';
+import { Mail, Linkedin, MapPin, Phone } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -12,7 +12,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <a
             href="mailto:sarthakroff@gmail.com"
             className="group relative bg-gradient-to-br from-gray-50 to-white rounded-xl p-8 border border-gray-200 hover:border-cyan-500/50 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 text-center"
@@ -42,6 +42,21 @@ export default function Contact() {
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-cyan-600 transition-colors">LinkedIn</h3>
               <p className="text-gray-600 text-sm">Connect with me</p>
+            </div>
+          </a>
+
+          <a
+            href="tel:+918459526488" // Replace with your actual phone number
+            className="group relative bg-gradient-to-br from-gray-50 to-white rounded-xl p-8 border border-gray-200 hover:border-cyan-500/50 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 text-center"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-cyan-500/0 group-hover:from-cyan-500/5 group-hover:to-cyan-500/10 rounded-xl transition-all duration-500"></div>
+
+            <div className="relative">
+              <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
+                <Phone className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-cyan-600 transition-colors">Phone</h3>
+              <p className="text-gray-600 text-sm">+91 8459526488</p> {/* Replace with your actual number */}
             </div>
           </a>
 
