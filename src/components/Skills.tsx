@@ -16,19 +16,19 @@ const skillCategories = [
   {
     icon: Car,
     title: 'EV Powertrain & Integration',
-    skills: ['Powertrain Design', 'System Integration', 'Motor Tuning', 'Vehicle Dynamics', 'Performance Optimization'],
+    skills: ['Powertrain Design', 'Motor Tuning', 'Vehicle Dynamics', 'Performance Optimization'],
     gradient: 'from-red-500 to-pink-500'
   },
   {
     icon: Plane,
     title: 'Avionics & UAV Systems',
-    skills: ['Flight Control', 'Telemetry Systems', 'Stability Tuning', 'Sensor Fusion', 'UAV Design', 'Autonomous Navigation'],
+    skills: ['Telemetry Systems', 'Stability Tuning', 'Sensor Fusion', 'UAV Design'],
     gradient: 'from-purple-500 to-fuchsia-500'
   },
   {
     icon: Bot,
     title: 'Robotics & Automation',
-    skills: ['Actuator Control', 'Sensor Integration', 'PID Control', 'Kinematics', 'Real-time Systems', 'Automation'],
+    skills: ['Actuator Control', 'Sensor Integration', 'PID Control', 'Automation'],
     gradient: 'from-emerald-500 to-teal-500'
   },
   {
@@ -46,7 +46,7 @@ const skillCategories = [
   {
     icon: Cog,
     title: 'Prototyping & Manufacturing',
-    skills: ['PCB Design', 'Circuit Design', 'PCB Soldering', 'TIG Welding', 'Stick Welding', 'Rapid Prototyping'],
+    skills: ['PCB Design', 'Circuit Design', 'PCB Soldering', 'TIG Welding', 'Stick Welding', 'Precise Soldering'],
     gradient: 'from-rose-500 to-red-500'
   },
   {
@@ -139,7 +139,7 @@ export default function Skills() {
             {[
               'MATLAB', 'Simulink', 'Proteus', 'Multisim', 'KiCad', 'Altium',
               'EasyEDA', 'SolidWorks', 'AutoCAD', 'OptimumLap', 'MotorETS', 'Ansys',
-              'Arduino IDE', 'STM32CubeIDE', 'VS Code', 'Python', 'C/C++', 'Git'
+              'Arduino IDE', 'STM32CubeIDE', 'VS Code', 'Python'
             ].map((software, index) => (
               <div
                 key={index}
@@ -154,15 +154,15 @@ export default function Skills() {
         {/* Skills Summary */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
           <div className="bg-gradient-to-br from-cyan-500/10 to-cyan-500/5 border border-cyan-500/20 rounded-2xl p-6">
-            <div className="text-3xl font-bold text-cyan-400 mb-2">15+</div>
+            <div className="text-3xl font-bold text-cyan-400 mb-2">5+</div>
             <div className="text-gray-400 font-medium">Technical Domains</div>
           </div>
           <div className="bg-gradient-to-br from-amber-500/10 to-amber-500/5 border border-amber-500/20 rounded-2xl p-6">
-            <div className="text-3xl font-bold text-amber-400 mb-2">25+</div>
+            <div className="text-3xl font-bold text-amber-400 mb-2">15+</div>
             <div className="text-gray-400 font-medium">Tools & Technologies</div>
           </div>
           <div className="bg-gradient-to-br from-purple-500/10 to-purple-500/5 border border-purple-500/20 rounded-2xl p-6">
-            <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
+            <div className="text-3xl font-bold text-purple-400 mb-2">30+</div>
             <div className="text-gray-400 font-medium">Projects Completed</div>
           </div>
         </div>
