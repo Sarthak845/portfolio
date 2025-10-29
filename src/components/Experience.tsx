@@ -99,7 +99,7 @@ const experiences = [
   }
 ];
 
-const getGradientByType = (type) => {
+const getGradientByType = (type: string) => {
   switch (type) {
     case 'leadership':
       return 'from-purple-500 to-pink-600';
@@ -114,7 +114,7 @@ const getGradientByType = (type) => {
   }
 };
 
-const getBorderColorByType = (type) => {
+const getBorderColorByType = (type: string) => {
   switch (type) {
     case 'leadership':
       return 'hover:border-purple-500/50';
@@ -129,7 +129,7 @@ const getBorderColorByType = (type) => {
   }
 };
 
-const getTextColorByType = (type) => {
+const getTextColorByType = (type: string) => {
   switch (type) {
     case 'leadership':
       return 'group-hover:text-purple-600';
@@ -292,7 +292,7 @@ export default function Experience() {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fillBar0 { to { width: 100%; } }
         @keyframes fillBar1 { to { width: 80%; } }
         @keyframes fillBar2 { to { width: 60%; } }
