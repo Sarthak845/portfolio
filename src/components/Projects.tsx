@@ -1,7 +1,4 @@
-import { Code2, Zap, Car, Cpu, Battery, Radio } from 'lucide-react';
-
-// Simple inline Quadcopter/Drone icon (defined locally because 'Drone' isn't exported by lucide-react)
-const Drone = (props: any) => (
+import { Code2, Zap, Car, Cpu, Battery, Drone, Radio, CpuIcon } from 'lucide-react';
 
 const projects = [
   {
@@ -13,29 +10,29 @@ const projects = [
   },
   {
     title: 'Racing EV Dashboard',
-    description: 'Multiple featured digital dashboard displaying real-time telemetry including speed, battery parameters,RPM meter, brake meter, and rear view camera feed.',
-    tech: ['Embedded Programming', 'Display Systems', 'Hardware', 'Real-time Data'],
+    description: 'Multiple-featured digital dashboard displaying real-time telemetry including speed, battery parameters, motor RPM, and rear-view camera feed.',
+    tech: ['Embedded Programming', 'Display Systems', 'CAN Protocol', 'Real-time Data'],
     icon: <Cpu className="w-6 h-6 text-white" />,
     award: true
   },
   {
-    title: '72V 90Ah Racing EV Battery',
-    description: 'Custom designed and manufactured high-performance 72V 90Ah battery packs with integrated BMS for racing electric vehicles.',
+    title: '72V Racing EV Battery',
+    description: 'Custom designed and manufactured high-performance 72V battery packs with integrated BMS for racing electric vehicles.',
     tech: ['Battery Design', 'BMS', 'Thermal Management', 'Power Systems'],
     icon: <Battery className="w-6 h-6 text-white" />,
     award: true
   },
   {
     title: 'FC-Quadcopter V1',
-    description: 'Complete quadcopter system with custom flight controller, telemetry, for research and practical applications.',
-    tech: ['Drone Design', 'Flight Dynamics', 'Sensor Fusion', 'Aerodynamics'],
+    description: 'Complete quadcopter system with custom flight controller, telemetry, and autonomous capabilities for research and practical applications.',
+    tech: ['UAV Design', 'Flight Dynamics', 'Sensor Fusion', 'Aerodynamics'],
     icon: <Drone className="w-6 h-6 text-white" />,
     award: false
   },
   {
     title: 'NRF Transmitter & Receiver',
     description: 'Custom wireless communication system using NRF modules for reliable low-latency remote control and telemetry data transmission.',
-    tech: ['RF Communication', 'Embedded', 'Protocol Design', 'Wireless Systems'],
+    tech: ['RF Communication', 'Embedded C', 'Protocol Design', 'Wireless Systems'],
     icon: <Radio className="w-6 h-6 text-white" />,
     award: false
   },
@@ -58,7 +55,7 @@ export default function Projects() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Featured Projects</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-amber-500 mx-auto rounded-full"></div>
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
-            Showcasing my key projects in electric vehicles, drones, and embedded systems.
+            Showcasing my key projects in electric vehicles, drones, and embedded systems
           </p>
         </div>
 
@@ -94,7 +91,7 @@ export default function Projects() {
                 </p>
 
                 <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech, techIndex) => (
+                  {project.tech.map((tech: string, techIndex: number) => (
                     <span
                       key={techIndex}
                       className="px-3 py-1 bg-gray-700/50 border border-gray-600 rounded-full text-xs text-gray-300 group-hover:border-cyan-500/50 group-hover:bg-cyan-500/10 transition-all duration-300"
@@ -113,10 +110,10 @@ export default function Projects() {
           <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">Explore All Projects</h3>
             <p className="text-gray-400 mb-6">
-              Discover my complete portfolio featuring projects across Robotics, EV Systems, Drones, and Power Electronics.
+              Discover my complete portfolio featuring 30+ projects across Robotics, EV Systems, Drones, and Power Electronics
             </p>
             <a
-              href="https://sart-portfolio.netlify.app/" // Change this to your actual projects portfolio URL
+              href="/projects" // Change this to your actual projects portfolio URL
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-amber-600 hover:from-cyan-500 hover:to-amber-500 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
             >
               <Code2 className="w-5 h-5" />
