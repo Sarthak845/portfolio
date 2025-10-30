@@ -113,7 +113,7 @@ export default function Projects() {
               Discover my complete portfolio featuring projects across Robotics, EV Systems, Drones, and Power Electronics
             </p>
             <a
-              href="https://sart-portfolio.netlify.app/"
+              href="https://sarthaksprojectportfolio.netlify.app/"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-amber-600 hover:from-cyan-500 hover:to-amber-500 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
             >
               <Code2 className="w-5 h-5" />
