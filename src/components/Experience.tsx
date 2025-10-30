@@ -282,8 +282,8 @@ export default function Experience() {
             <div className="text-gray-600">Engineers Mentored</div>
           </div>
           <div className="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
-            <div className="text-3xl font-bold text-gray-900 mb-2">∞</div>
-            <div className="text-gray-600">Passion for Innovation</div>
+            <div className="text-3xl font-bold text-gray-900 mb-2">15+</div>
+            <div className="text-gray-600">Competitions & Events</div>
           </div>
         </div>
       </div>
