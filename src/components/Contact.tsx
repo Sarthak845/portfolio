@@ -14,7 +14,7 @@ export default function Contact() {
 
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <a
-            href="mailto:sarthakroff@gmail.com"
+            href="mailto:sarthakrahate.pw@gmail.com"
             className="group relative bg-gradient-to-br from-gray-50 to-white rounded-xl p-8 border border-gray-200 hover:border-cyan-500/50 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 text-center"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-cyan-500/0 group-hover:from-cyan-500/5 group-hover:to-cyan-500/10 rounded-xl transition-all duration-500"></div>
@@ -24,7 +24,7 @@ export default function Contact() {
                 <Mail className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-cyan-600 transition-colors">Email</h3>
-              <p className="text-gray-600 text-sm break-all">sarthakroff@gmail.com</p>
+              <p className="text-gray-600 text-sm break-all">sarthakrahate.pw@gmail.com</p>
             </div>
           </a>
 
