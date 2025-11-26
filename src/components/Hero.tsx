@@ -1,4 +1,4 @@
-import { Download, Cpu, Zap, Car, Plane } from 'lucide-react';
+import { Cpu, Zap, Car, Plane } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -51,18 +51,7 @@ export default function Hero() {
           Turning 'what if' into 'what is' through electronics and innovation.
         </p>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-          {/* Download Resume Button */}
-          <a 
-            href="/resume.pdf" 
-            download="Sarthak_Rahate_Resume.pdf"
-            className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-400 hover:to-cyan-500 text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_40px_rgba(6,182,212,0.4)] border border-cyan-400/20"
-          >
-            <Download className="w-5 h-5 transition-transform group-hover:translate-y-0.5" />
-            Download Resume
-          </a>
-          
+  
           {/* View Projects Button */}
           <a 
             href="#projects"
@@ -71,10 +60,7 @@ export default function Hero() {
             View Projects
             <span className="transition-transform group-hover:translate-x-1">→</span>
           </a>
-        </div>
-
-        
-      </div>
+          </div>
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
@@ -86,7 +72,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes float {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
           50% { transform: translateY(-20px) rotate(5deg); }

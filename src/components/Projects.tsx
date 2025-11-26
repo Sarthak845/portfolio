@@ -30,11 +30,13 @@ const projects = [
     award: false
   },
   {
-    title: 'NRF Transmitter & Receiver',
-    description: 'Custom wireless communication system using NRF modules for reliable low-latency remote control and telemetry data transmission.',
-    tech: ['RF Communication', 'Embedded', 'Protocol Design', 'Wireless Systems'],
-    icon: <Radio className="w-6 h-6 text-white" />,
-    award: false
+    
+  title: 'Formula E Gen3 Digital Twin',
+  description: 'Physics based Digital Twin of Formula E Gen3 EV with 2RC Thevenin battery model, Field Oriented Control, and validated longitudinal dynamics.',
+  tech: ['System Modeling', 'FOC Control', 'Battery Modeling', 'Vehicle Dynamics', 'Vehical Modelling'],
+  icon: <Car className="w-6 h-6 text-white" />,
+  award: false
+
   },
   {
     title: 'STM32 Flight Controller',
