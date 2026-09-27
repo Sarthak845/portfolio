@@ -37,13 +37,14 @@ export default function Hero() {
           Sarthak <span className="bg-gradient-to-r from-cyan-400 to-amber-400 bg-clip-text text-transparent">Rahate</span>
         </h1>
 
-        {/* Professional Title - Optimized for One Line */}
-        <div className="text-lg md:text-xl text-gray-300 mb-6 font-light tracking-wide max-w-4xl mx-auto leading-tight">
+        {/* Professional Title - Updated with broader engineering profile */}
+        <div className="text-lg md:text-xl text-gray-300 mb-6 font-light tracking-wide max-w-4xl mx-auto leading-relaxed">
           Electronics & Communication Engineer | 
-          <span className="text-cyan-400"> EV Systems</span> | 
-          <span className="text-amber-400"> Avionics</span> | 
-          <span className="text-purple-400"> Embedded</span> | 
-          <span className="text-blue-400"> VLSI</span>
+          <span className="text-cyan-400"> Semiconductor Technology</span> | 
+          <span className="text-amber-400"> EV Systems</span> | 
+          <span className="text-blue-400"> Power Electronics</span> | 
+          <span className="text-purple-400"> Avionics</span> | 
+          <span className="text-indigo-400"> GaN & SiC</span>
         </div>
 
         {/* Tagline */}

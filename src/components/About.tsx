@@ -1,4 +1,3 @@
-
 export default function About() {
   return (
     <section id="about" className="py-24 bg-white">
@@ -11,8 +10,7 @@ export default function About() {
 
         <div className="max-w-4xl mx-auto">
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
-            I’m an Electronics Engineer who builds systems that think and perform. I learn by doing from designing electric vehical powertrains and avionics systems to developing smart robotics and IoT hardware. I’ve led teams to national stages and gained global exposure through NASA’s educational program. For me innovation isn’t theory, it’s hands on, tested, and built to make a difference.
-
+            I'm an Electronics & Communication Engineer who builds systems that think and perform. My work spans embedded systems, PCB and hardware development, EV powertrains, power electronics, avionics, robotics, IoT, and semiconductor technology. I learn by doing- designing, testing, and iterating on real hardware until it works. Through national engineering competitions and team based projects, I've gained hands on experience turning concepts into functional systems. For me, engineering isn't just theory, it's about building things that make a difference.
           </p>
         </div>
       </div>
