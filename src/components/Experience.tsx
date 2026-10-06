@@ -1,6 +1,6 @@
 import { GraduationCap, Trophy, Users, Cpu, Battery, Zap, Award, Calendar, Crown, Rocket, TrendingUp, Briefcase, CircuitBoard, Bot, ExternalLink, FileText } from 'lucide-react';
 
-const experiences = [
+const experiences: any[] = [
   {
     type: 'robotics',
     icon: Bot,
@@ -208,7 +208,6 @@ const ExperienceCard = ({ exp }: { exp: any; index: number }) => {
           </div>
         </div>
 
-        {/* Progression for Pro-Karters */}
         {exp.progression && (
           <div className="mb-6 p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl border border-purple-100">
             <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
@@ -281,7 +280,6 @@ const ExperienceCard = ({ exp }: { exp: any; index: number }) => {
           </div>
         </div>
 
-        {/* Certificate Button */}
         {exp.certificateUrl && (
           <div className="mt-6">
             <a
