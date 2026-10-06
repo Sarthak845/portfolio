@@ -1,4 +1,4 @@
-import { GraduationCap, Trophy, Users, Cpu, Battery, Zap, Award, Calendar, Crown, Rocket, TrendingUp, Briefcase, CircuitBoard, Bot } from 'lucide-react';
+import { GraduationCap, Trophy, Users, Cpu, Battery, Zap, Award, Calendar, Crown, Rocket, TrendingUp, Briefcase, CircuitBoard, Bot, ExternalLink, FileText } from 'lucide-react';
 
 const experiences = [
   {
@@ -6,8 +6,9 @@ const experiences = [
     icon: Bot,
     title: 'Actuator & Dexterity Intern',
     organization: 'Medh IQ Dynamics',
+    website: 'https://medhiqdynamics.com/',
     period: 'September 2026 – Present',
-    description: 'Working on an industrial humanoid robot, focusing on actuator selection, motor selection, and dexterity for the shoulder joints. Responsible for load and torque calculations to support a payload capacity of approximately 5.5 kg.',
+    description: 'Working on an industrial humanoid robot, focusing on actuator selection, motor selection, and dexterity for the shoulder joints. Responsible for load and torque calculations to support a payload capacity of approximately 6 kg.',
     highlights: [
       'Motor & Actuator Selection',
       'Load & Torque Calculations',
@@ -16,7 +17,7 @@ const experiences = [
     ],
     achievements: [
       { icon: Zap, text: 'Actuator Selection' },
-      { icon: Cpu, text: 'Physics-Based Calculations' },
+      { icon: Cpu, text: 'Physics Based Calculations' },
       { icon: Users, text: 'Robot Dynamics' }
     ]
   },
@@ -25,35 +26,36 @@ const experiences = [
     icon: CircuitBoard,
     title: 'Electronics Intern',
     organization: 'WL Dynamics LLP',
+    certificateUrl: '/Sarthak.pdf',
     period: 'February 2026 – August 2026',
-    description: 'Designed and developed a 6000-lux LED module for a defense-grade UAV application. Took the PCB through the complete hardware development cycle, from design to deployment.',
+    description: 'Designed and developed a 6000 lux LED module for a defense grade UAV application. Took the PCB through the complete hardware development cycle, from design to deployment.',
     highlights: [
-      'PCB Design (KiCad)',
+      'PCB Design',
       'PCB Manufacturing & Assembly',
       'Hardware Implementation & Testing',
       'Deployed on Defense Grade UAV',
       '6000 Lux Illumination Module'
     ],
     achievements: [
-      { icon: Cpu, text: 'PCB Design (KiCad)' },
+      { icon: Cpu, text: 'PCB Design' },
       { icon: Award, text: 'Hardware Deployment' },
       { icon: Rocket, text: 'Avionics & Drone Electronics' }
     ]
   },
   {
-    type: 'Formula student & leadership',
+    type: 'Formula student & Leadership',
     icon: Crown,
-    title: 'Engineering & Leadership',
+    title: 'Formula Student & Leadership',
     organization: 'Team Pro-Karters, MIT-WPU',
     period: '2022 – 2026',
-    description: 'Four-year journey from Junior Engineer to Vice Captain & Driver. Led EV powertrain, battery systems, and vehicle electronics development. Managed teams, mentored junior engineers, and represented the team in national competitions.',
+    description: 'Four year journey from Junior Engineer to Vice Captain & Driver. Led EV powertrain, battery systems, and vehicle electronics development. Managed teams, mentored junior engineers, and represented the team in national competitions.',
     progression: [
       { role: 'Electronics & Powertrain Junior', period: '2022–2023' },
       { role: 'Electronics & Powertrain Lead', period: '2023–2024' },
       { role: 'Vice Captain & Driver', period: '2024–2026' }
     ],
     highlights: [
-      'AIR 7 - Go-Kart Design Challenge 2023',
+      'AIR 7 - Go Kart Design Challenge 2023',
       'AIR 5 - Indian Karting Race 2024',
       'AIR 1 - Design Presentation (FKDC)',
       'AIR 2 - Skidpad (FKDC)',
@@ -74,7 +76,7 @@ const experiences = [
     title: 'Trainee - VLSI & Semiconductor Systems',
     organization: 'IIT Jodhpur (National Technical Tour)',
     period: '2024',
-    description: '10-day intensive hands-on training in chip design and semiconductor systems using industry-standard EDA tools.',
+    description: '10 day intensive hands on training in chip design and semiconductor systems using industry standard EDA tools.',
     highlights: [
       'VLSI Design Principles',
       'Altium Designer',
@@ -178,9 +180,22 @@ const ExperienceCard = ({ exp }: { exp: any; index: number }) => {
                 {exp.title}
               </h3>
               <p className="text-xl text-gray-700 font-semibold mb-1">{exp.organization}</p>
-              <div className="flex items-center gap-2 text-gray-500">
-                <Calendar className="w-4 h-4" />
-                <span className="font-medium">{exp.period}</span>
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-gray-500">
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4" />
+                  <span className="font-medium">{exp.period}</span>
+                </div>
+                {exp.website && (
+                  <a
+                    href={exp.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-emerald-600 hover:text-emerald-700 font-medium transition-colors"
+                  >
+                    Visit Website
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )}
               </div>
             </div>
           </div>
@@ -265,6 +280,21 @@ const ExperienceCard = ({ exp }: { exp: any; index: number }) => {
             </div>
           </div>
         </div>
+
+        {/* Certificate Button */}
+        {exp.certificateUrl && (
+          <div className="mt-6">
+            <a
+              href={exp.certificateUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              <FileText className="w-4 h-4" />
+              View Internship Certificate
+            </a>
+          </div>
+        )}
 
         <div className="mt-6">
           <div className="w-full bg-gray-200 rounded-full h-2">
