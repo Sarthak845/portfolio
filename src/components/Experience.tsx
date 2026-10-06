@@ -12,7 +12,6 @@ const experiences = [
       'Motor & Actuator Selection',
       'Load & Torque Calculations',
       'Shoulder Joint Development',
-      'Payload Capacity: ~5.5 kg',
       'MATLAB/Simulink, Robot Kinematics'
     ],
     achievements: [
@@ -32,8 +31,8 @@ const experiences = [
       'PCB Design (KiCad)',
       'PCB Manufacturing & Assembly',
       'Hardware Implementation & Testing',
-      'Deployed on Defense-Grade UAV',
-      '6000-Lux Illumination Module'
+      'Deployed on Defense Grade UAV',
+      '6000 Lux Illumination Module'
     ],
     achievements: [
       { icon: Cpu, text: 'PCB Design (KiCad)' },
@@ -42,7 +41,7 @@ const experiences = [
     ]
   },
   {
-    type: 'leadership',
+    type: 'Formula student & leadership',
     icon: Crown,
     title: 'Engineering & Leadership',
     organization: 'Team Pro-Karters, MIT-WPU',
