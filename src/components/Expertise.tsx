@@ -1,35 +1,35 @@
-import { Car, Plane, Bot, Cpu, Wrench } from 'lucide-react';
+import { Car, Bot, Cpu, Plane, Wrench } from 'lucide-react';
 
 const domains = [
   {
     icon: Car,
     title: 'Electric Vehicles',
-    description: 'Powertrain architecture, motor control algorithms, battery management systems, award winning EV designs',
-    gradient: 'from-green-500 to-emerald-600' // Green for eco-friendly EVs
-  },
-  {
-    icon: Plane,
-    title: 'UAVs & Drones',
-    description: 'Flight control systems, advanced telemetry, autonomous navigation systems',
-    gradient: 'from-sky-500 to-blue-600' // Sky blue for aviation
+    description: 'Hands-on experience with EV powertrain systems, PMSM/BLDC motors, battery systems, motor controllers, and vehicle electronics through electric racing-kart projects.',
+    gradient: 'from-green-500 to-emerald-600'
   },
   {
     icon: Bot,
-    title: 'Robotics & IoT',
-    description: 'Multi-sensor fusion, intelligent obstacle avoidance, real time embedded communication',
-    gradient: 'from-purple-500 to-fuchsia-600' // Purple for advanced robotics
-  },
-  {
-    icon: Wrench,
-    title: 'Vehicle Mechanical Design',
-    description: 'Complete vehicle systems: chassis design, steering geometry, braking systems, transmission integration',
-    gradient: 'from-orange-500 to-red-500' // Red/Orange for mechanical/industrial
+    title: 'Robotics & Embedded Systems',
+    description: 'Experience with embedded hardware, microcontrollers, sensors, and actuator-related engineering. Currently working on actuator selection and load/torque calculations for an industrial humanoid robot.',
+    gradient: 'from-purple-500 to-fuchsia-600'
   },
   {
     icon: Cpu,
-    title: 'VLSI & Semiconductors',
-    description: 'CMOS design methodology, EDA tool flow, integrated circuit design',
-    gradient: 'from-gray-600 to-slate-700' // Gray for silicon chips
+    title: 'Power Electronics & Semiconductor Technology',
+    description: 'Developing knowledge in power electronics, semiconductor device fundamentals, MOSFETs, and GaN/SiC technology through structured learning and simulation-based design projects.',
+    gradient: 'from-orange-500 to-red-500'
+  },
+  {
+    icon: Plane,
+    title: 'UAVs & Avionics',
+    description: 'Worked on flight-controller hardware, drone electronics, and PCB development. Designed a 6000-lux LED PCB from scratch in KiCad, from manufacturing to deployment in a defense-grade UAV application.',
+    gradient: 'from-sky-500 to-blue-600'
+  },
+  {
+    icon: Wrench,
+    title: 'Vehicle Systems & Integration',
+    description: 'Experience with vehicle electrical architecture, system integration, testing, and cross-disciplinary development through hands-on work with electric racing karts.',
+    gradient: 'from-amber-500 to-orange-600'
   }
 ];
 
@@ -38,7 +38,7 @@ export default function Expertise() {
     <section id="expertise" className="py-24 bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Domains of Expertise</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Engineering Domains</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-amber-500 mx-auto rounded-full"></div>
         </div>
 

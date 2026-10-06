@@ -317,7 +317,7 @@ export default function Experience() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Experience & Leadership</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-amber-500 mx-auto rounded-full"></div>
           <p className="text-gray-600 mt-6 text-lg max-w-2xl mx-auto">
-            From hands-on engineering to technical leadership — building, testing, and developing real-world electronic systems across multiple domains.
+            From hands on engineering to technical leadership. Building, testing, and developing real world electronic systems across multiple domains.
           </p>
         </div>
 
