@@ -2,7 +2,7 @@ import { GraduationCap, Trophy, Users, Cpu, Battery, Zap, Award, Calendar, Crown
 
 const experiences = [
   {
-    type: 'internship',
+    type: 'robotics',
     icon: Bot,
     title: 'Actuator & Dexterity Intern',
     organization: 'Medh IQ Dynamics',
@@ -22,7 +22,7 @@ const experiences = [
     ]
   },
   {
-    type: 'internship',
+    type: 'electronics',
     icon: CircuitBoard,
     title: 'Electronics Intern',
     organization: 'WL Dynamics LLP',
@@ -115,26 +115,26 @@ const ExperienceCard = ({ exp }: { exp: any; index: number }) => {
   
   const getStyles = (type: string) => {
     switch (type) {
-      case 'leadership':
+      case 'robotics':
         return {
-          gradient: 'from-purple-500 to-pink-600',
-          borderColor: 'hover:border-purple-500/50',
-          textColor: 'group-hover:text-purple-600',
-          bgHover: 'group-hover:from-purple-500/5 group-hover:to-pink-500/5'
+          gradient: 'from-indigo-500 to-violet-600',
+          borderColor: 'hover:border-indigo-500/50',
+          textColor: 'group-hover:text-indigo-600',
+          bgHover: 'group-hover:from-indigo-500/5 group-hover:to-violet-500/5'
         };
-      case 'internship':
-        return {
-          gradient: 'from-emerald-500 to-teal-600',
-          borderColor: 'hover:border-emerald-500/50',
-          textColor: 'group-hover:text-emerald-600',
-          bgHover: 'group-hover:from-emerald-500/5 group-hover:to-teal-500/5'
-        };
-      case 'technical':
+      case 'electronics':
         return {
           gradient: 'from-cyan-500 to-blue-600',
           borderColor: 'hover:border-cyan-500/50',
           textColor: 'group-hover:text-cyan-600',
           bgHover: 'group-hover:from-cyan-500/5 group-hover:to-blue-500/5'
+        };
+      case 'Formula student & Leadership':
+        return {
+          gradient: 'from-purple-500 to-pink-600',
+          borderColor: 'hover:border-purple-500/50',
+          textColor: 'group-hover:text-purple-600',
+          bgHover: 'group-hover:from-purple-500/5 group-hover:to-pink-500/5'
         };
       case 'education':
         return {
@@ -190,7 +190,7 @@ const ExperienceCard = ({ exp }: { exp: any; index: number }) => {
                     href={exp.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-emerald-600 hover:text-emerald-700 font-medium transition-colors"
+                    className="inline-flex items-center gap-1 text-indigo-600 hover:text-indigo-700 font-medium transition-colors"
                   >
                     Visit Website
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -203,7 +203,7 @@ const ExperienceCard = ({ exp }: { exp: any; index: number }) => {
           <div className="flex-shrink-0">
             <span className={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${styles.gradient} text-white rounded-full text-sm font-semibold shadow-lg`}>
               <Award className="w-4 h-4" />
-              {exp.type === 'internship' ? 'Internship' : exp.type.charAt(0).toUpperCase() + exp.type.slice(1)}
+              {exp.type === 'robotics' || exp.type === 'electronics' ? 'Internship' : exp.type.charAt(0).toUpperCase() + exp.type.slice(1)}
             </span>
           </div>
         </div>
@@ -288,7 +288,7 @@ const ExperienceCard = ({ exp }: { exp: any; index: number }) => {
               href={exp.certificateUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className={`inline-flex items-center gap-2 px-5 py-3 bg-gradient-to-r ${styles.gradient} hover:opacity-90 text-white rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl`}
             >
               <FileText className="w-4 h-4" />
               View Internship Certificate
