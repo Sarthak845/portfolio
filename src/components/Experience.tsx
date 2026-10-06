@@ -1,63 +1,72 @@
-import { GraduationCap, Trophy, Users, Cpu, Battery, Zap, Award, Calendar, Crown, Rocket, TrendingUp } from 'lucide-react';
+import { GraduationCap, Trophy, Users, Cpu, Battery, Zap, Award, Calendar, Crown, Rocket, TrendingUp, Briefcase, CircuitBoard, Bot } from 'lucide-react';
 
 const experiences = [
   {
+    type: 'internship',
+    icon: Bot,
+    title: 'Actuator & Dexterity Intern',
+    organization: 'Medh IQ Dynamics',
+    period: 'September 2026 – Present',
+    description: 'Working on an industrial humanoid robot, focusing on actuator selection, motor selection, and dexterity for the shoulder joints. Responsible for load and torque calculations to support a payload capacity of approximately 5.5 kg.',
+    highlights: [
+      'Motor & Actuator Selection',
+      'Load & Torque Calculations',
+      'Shoulder Joint Development',
+      'Payload Capacity: ~5.5 kg',
+      'MATLAB/Simulink, Robot Kinematics'
+    ],
+    achievements: [
+      { icon: Zap, text: 'Actuator Selection' },
+      { icon: Cpu, text: 'Physics-Based Calculations' },
+      { icon: Users, text: 'Robot Dynamics' }
+    ]
+  },
+  {
+    type: 'internship',
+    icon: CircuitBoard,
+    title: 'Electronics Intern',
+    organization: 'WL Dynamics LLP',
+    period: 'February 2026 – August 2026',
+    description: 'Designed and developed a 6000-lux LED module for a defense-grade UAV application. Took the PCB through the complete hardware development cycle, from design to deployment.',
+    highlights: [
+      'PCB Design (KiCad)',
+      'PCB Manufacturing & Assembly',
+      'Hardware Implementation & Testing',
+      'Deployed on Defense-Grade UAV',
+      '6000-Lux Illumination Module'
+    ],
+    achievements: [
+      { icon: Cpu, text: 'PCB Design (KiCad)' },
+      { icon: Award, text: 'Hardware Deployment' },
+      { icon: Rocket, text: 'Avionics & Drone Electronics' }
+    ]
+  },
+  {
     type: 'leadership',
     icon: Crown,
-    title: 'Vice Captain',
+    title: 'Engineering & Leadership',
     organization: 'Team Pro-Karters, MIT-WPU',
-    period: '2024 – 2025',
-    description: 'Oversaw complete technical and management operations spanning electrical, mechanical, and design divisions. Served as racing driver and mentor for junior engineers.',
+    period: '2022 – 2026',
+    description: 'Four-year journey from Junior Engineer to Vice Captain & Driver. Led EV powertrain, battery systems, and vehicle electronics development. Managed teams, mentored junior engineers, and represented the team in national competitions.',
+    progression: [
+      { role: 'Electronics & Powertrain Junior', period: '2022–2023' },
+      { role: 'Electronics & Powertrain Lead', period: '2023–2024' },
+      { role: 'Vice Captain & Driver', period: '2024–2026' }
+    ],
     highlights: [
-      'AIR 2 - Morphine Motorsports 2025',
-      'AIR 6 - Formula Kart Design Challenge',
+      'AIR 7 - Go-Kart Design Challenge 2023',
+      'AIR 5 - Indian Karting Race 2024',
       'AIR 1 - Design Presentation (FKDC)',
       'AIR 2 - Skidpad (FKDC)',
-      'Team Leadership & Driver'
-    ],
-    achievements: [
-      { icon: Trophy, text: 'Multiple Podium Finishes' },
-      { icon: Users, text: 'Racing Driver' },
-      { icon: Award, text: 'National Level Recognition' }
-    ]
-  },
-  {
-    type: 'technical',
-    icon: Rocket,
-    title: 'Electronics & Powertrain Lead',
-    organization: 'Team Pro-Karters, MIT-WPU',
-    period: '2023 – 2024',
-    description: 'Led electronics and powertrain design for all-electric go-kart, focusing on BLDC motor control, energy optimization, and telemetry systems.',
-    highlights: [
-      'AIR 5 - Indian Karting Race 2024',
+      'AIR 6 - Formula Kart Design Challenge',
+      'AIR 2 - Morphine Motorsports 2025',
       'Best Powertrain Award',
-      'Innovation Award',
-      'Electrical System Officer (ESO)',
-      
+      'Innovation Award'
     ],
     achievements: [
-      { icon: Battery, text: 'EV Dashboard Design' },
-      { icon: Zap, text: 'Motor Tuning Algorithms' },
-      { icon: Award, text: 'National Awards' }
-    ]
-  },
-  {
-    type: 'technical',
-    icon: TrendingUp,
-    title: 'Junior Electronics & Powertrain Engineer',
-    organization: 'Team Pro-Karters, MIT-WPU',
-    period: '2022 – 2023',
-    description: 'Assisted in battery pack design, electrical layout, and manufacturing for first-generation electric kart. Gained hands-on vehicle assembly experience.',
-    highlights: [
-      'AIR 7 - Go-Kart Design Challenge',
-      'Battery Pack Design',
-      'Electrical System Layout',
-      'Vehicle Assembly'
-    ],
-    achievements: [
-      { icon: Battery, text: 'Battery Systems' },
-      { icon: Zap, text: 'Electrical Layout' },
-      { icon: Trophy, text: 'National Debut' }
+      { icon: Battery, text: '6kW PMSM + 72V, 72Ah System' },
+      { icon: Zap, text: '6kW BLDC + 72V, 90Ah System' },
+      { icon: Users, text: 'Team Leadership & Mentoring' }
     ]
   },
   {
@@ -103,7 +112,6 @@ const experiences = [
 const ExperienceCard = ({ exp }: { exp: any; index: number }) => {
   const Icon = exp.icon;
   
-  // Static gradient classes based on type
   const getStyles = (type: string) => {
     switch (type) {
       case 'leadership':
@@ -112,6 +120,13 @@ const ExperienceCard = ({ exp }: { exp: any; index: number }) => {
           borderColor: 'hover:border-purple-500/50',
           textColor: 'group-hover:text-purple-600',
           bgHover: 'group-hover:from-purple-500/5 group-hover:to-pink-500/5'
+        };
+      case 'internship':
+        return {
+          gradient: 'from-emerald-500 to-teal-600',
+          borderColor: 'hover:border-emerald-500/50',
+          textColor: 'group-hover:text-emerald-600',
+          bgHover: 'group-hover:from-emerald-500/5 group-hover:to-teal-500/5'
         };
       case 'technical':
         return {
@@ -150,11 +165,9 @@ const ExperienceCard = ({ exp }: { exp: any; index: number }) => {
     <div
       className={`group relative bg-white rounded-2xl p-8 border-2 border-gray-100 ${styles.borderColor} hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1`}
     >
-      {/* Background Gradient Effect */}
       <div className={`absolute inset-0 bg-gradient-to-br from-transparent to-transparent ${styles.bgHover} rounded-2xl transition-all duration-500`}></div>
 
       <div className="relative">
-        {/* Header Section */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-6">
           <div className="flex items-start gap-6">
             <div className={`w-20 h-20 bg-gradient-to-br ${styles.gradient} rounded-2xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg`}>
@@ -176,19 +189,42 @@ const ExperienceCard = ({ exp }: { exp: any; index: number }) => {
           <div className="flex-shrink-0">
             <span className={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${styles.gradient} text-white rounded-full text-sm font-semibold shadow-lg`}>
               <Award className="w-4 h-4" />
-              {exp.type.charAt(0).toUpperCase() + exp.type.slice(1)}
+              {exp.type === 'internship' ? 'Internship' : exp.type.charAt(0).toUpperCase() + exp.type.slice(1)}
             </span>
           </div>
         </div>
 
-        {/* Description */}
+        {/* Progression for Pro-Karters */}
+        {exp.progression && (
+          <div className="mb-6 p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl border border-purple-100">
+            <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
+              <TrendingUp className="w-5 h-5 text-purple-500" />
+              Career Progression
+            </h4>
+            <div className="flex flex-col sm:flex-row items-center gap-3">
+              {exp.progression.map((step: any, idx: number) => (
+                <div key={idx} className="flex items-center gap-3">
+                  <div className="flex items-center gap-2">
+                    <div className={`w-2 h-2 bg-gradient-to-r ${styles.gradient} rounded-full`}></div>
+                    <div>
+                      <p className="font-semibold text-gray-800 text-sm">{step.role}</p>
+                      <p className="text-gray-500 text-xs">{step.period}</p>
+                    </div>
+                  </div>
+                  {idx < exp.progression.length - 1 && (
+                    <span className="text-purple-400 text-lg hidden sm:block">→</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         <p className="text-gray-700 text-lg leading-relaxed mb-6 border-l-4 border-gray-200 pl-4">
           {exp.description}
         </p>
 
-        {/* Highlights & Achievements Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Highlights */}
           <div>
             <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
               <Zap className="w-5 h-5 text-amber-500" />
@@ -207,7 +243,6 @@ const ExperienceCard = ({ exp }: { exp: any; index: number }) => {
             </div>
           </div>
 
-          {/* Achievements */}
           <div>
             <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
               <Trophy className="w-5 h-5 text-amber-500" />
@@ -232,7 +267,6 @@ const ExperienceCard = ({ exp }: { exp: any; index: number }) => {
           </div>
         </div>
 
-        {/* Progress Bar */}
         <div className="mt-6">
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
@@ -243,7 +277,6 @@ const ExperienceCard = ({ exp }: { exp: any; index: number }) => {
         </div>
       </div>
 
-      {/* Animated Border */}
       <div className={`absolute left-0 bottom-0 w-0 h-1 bg-gradient-to-r ${styles.gradient} group-hover:w-full transition-all duration-500 rounded-full`}></div>
     </div>
   );
@@ -257,7 +290,7 @@ export default function Experience() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Experience & Leadership</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-amber-500 mx-auto rounded-full"></div>
           <p className="text-gray-600 mt-6 text-lg max-w-2xl mx-auto">
-            From technical innovation to team leadership - building excellence in electric vehicle systems and embedded technologies
+            From hands-on engineering to technical leadership — building, testing, and developing real-world electronic systems across multiple domains.
           </p>
         </div>
 
@@ -267,7 +300,6 @@ export default function Experience() {
           ))}
         </div>
 
-        {/* Summary Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
             <div className="text-3xl font-bold text-gray-900 mb-2">4+</div>
