@@ -4,31 +4,31 @@ const domains = [
   {
     icon: Car,
     title: 'Electric Vehicles',
-    description: 'Hands-on experience with EV powertrain systems, PMSM/BLDC motors, battery systems, motor controllers, and vehicle electronics through electric racing-kart projects.',
+    description: 'Hands on experience with EV powertrain systems, PMSM/BLDC motors, battery systems, motor controllers, and vehicle electronics through electric racing kart projects.',
     gradient: 'from-green-500 to-emerald-600'
   },
   {
     icon: Bot,
     title: 'Robotics & Embedded Systems',
-    description: 'Experience with embedded hardware, microcontrollers, sensors, and actuator-related engineering. Currently working on actuator selection and load/torque calculations for an industrial humanoid robot.',
+    description: 'Experience with microcontrollers, sensors, and actuator related engineering. Currently working on actuator selection and load/torque calculations for an industrial humanoid robot.',
     gradient: 'from-purple-500 to-fuchsia-600'
   },
   {
     icon: Cpu,
     title: 'Power Electronics & Semiconductor Technology',
-    description: 'Developing knowledge in power electronics, semiconductor device fundamentals, MOSFETs, and GaN/SiC technology through structured learning and simulation-based design projects.',
+    description: 'Developing knowledge in power electronics, semiconductor device fundamentals, MOSFETs, and GaN/SiC technology through simulation based design projects.',
     gradient: 'from-orange-500 to-red-500'
   },
   {
     icon: Plane,
     title: 'UAVs & Avionics',
-    description: 'Worked on flight-controller hardware, drone electronics, and PCB development. Designed a 6000-lux LED PCB from scratch in KiCad, from manufacturing to deployment in a defense-grade UAV application.',
+    description: 'Worked on flight controller hardware, drone electronics, and PCB development. Designed a 6000-lux LED PCB from scratch in KiCad, from manufacturing to deployment in a defense grade UAV application.',
     gradient: 'from-sky-500 to-blue-600'
   },
   {
     icon: Wrench,
     title: 'Vehicle Systems & Integration',
-    description: 'Experience with vehicle electrical architecture, system integration, testing, and cross-disciplinary development through hands-on work with electric racing karts.',
+    description: 'Experience with vehicle electrical architecture, system integration, testing, and cross disciplinary development through hands on work with electric racing karts.',
     gradient: 'from-amber-500 to-orange-600'
   }
 ];
